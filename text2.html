@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text2</title>
+    <style>
+        table{
+            margin-top: 50px;
+            text-align: center;
+            background-color: aqua;
+            color: black;
+            /* text-shadow: 3px 1px 3px; */
+            border: 5px solid black;
+        }
+        #show th, #show td{
+            padding: 13px;
+        }
+
+        #btna td input{
+            width: 100%;
+            background-color: red;
+            color: black;
+            font-size: 16px;
+            /* text-shadow: 3px 1px 3px; */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <table border="4">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <td>
+                        <input type="text" name="fname" placeholder="Inter your first name" id="fname">
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>last name</th>
+                    <td>
+                        <input type="text" name="lname" placeholder="Inter your last name" id="lname">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>
+                        <input type="email" name="Email" placeholder="Inter your email id" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Age</th>
+                    <td>
+                        <input type="text" name="age" placeholder="Inter your age" id="age">
+                    </td>
+                </tr>
+                <tr id="btna">
+                    <td colspan="2">
+                        <input type="button" nane="button" id="btn" value="Add" onclick="AddRow()">
+                    </td>            
+                </tr>
+            </tbody>
+        </table>
+
+        <table border="4" id="show">
+            <thead>
+                <tr>
+                    <th>First name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody id="userdata"></tbody>
+        </table>
+    </center>
+    <script>    
+        function AddRow(){
+            // alert('test');
+            // var AddRow = document.getElementById('show');
+            // // var NewRow = AddRown.insertRow(n);
+            // var NewRow = AddRow.innertRow(n);
+    
+            var firstName = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var email = document.getElementById("email").value;
+            var age = document.getElementById("age").value;
+            
+            var userdata = "<tr></td>"+ firstName + "</td><td>" + lname + "</td><td>" + email + "</td><td>" + age + "</td></tr>";
+            document.getElementById("userdata").innerHTML += userdata;    
+        }
+    </script>
+</body>
+</html>

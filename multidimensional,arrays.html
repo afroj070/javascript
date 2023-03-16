@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multidimensional</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    var ary = [
+        ["afroj",18,"male","bca"],
+        ["firoj",19,"male","mba"],
+        ["shabaz",20,"male","bba"],
+        ["khan",21,"male","b com"],
+        ["arman",22,"male","bca"]
+    ];
+    document.write("<table border='1px' cellspacing='0'>");
+    for(var a = 0; a < 5; a++){
+        document.write("<tr>")
+        for(var b = 0; b < 5; b++){
+            document.write("<td>"+ary[a][b]+  "</td>")
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>")
+    
+</script>
+</html>

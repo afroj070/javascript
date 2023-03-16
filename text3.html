@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text3</title>
+    <style>
+        table{
+            margin-top: 50px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>Name :</th>
+                <td><input type="name"name="name"id="fname"></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Last name :</th>
+                <td><input type="name"name="name"id="lname"></td>
+            </tr>
+            <tr>
+                <th>Email :</th>
+                <td><input type="email"name="email"id="email"></td>
+            </tr>
+            <tr>
+                <th>Age :</th>
+                <td><input type="number"name="number"id="age"></td>
+            </tr>
+            <tr id="btna">
+                <td colspan="2"><input type="button"name="button" id="btn"value="Add"onclick="AddRow()"></td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Last name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="userdata"></tbody>
+    </table>
+</body>
+<script>
+    function AddRow(){
+
+         
+        var firstName = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var email = document.getElementById("email").value;
+        var age = document.getElementById("age").value;
+    
+    
+        var userdata = "<tr><td>"+ firstName+"</td><td>"+lname+"</td><td>"+email+"</td><td>"+age+"</td><td><button>remove</button></td></tr>";
+        document.getElementById("userdata").innerHTML += userdata;
+        
+    //  document.getElementById("userdata").innerHTML + remove;
+    }
+</script>
+</html>

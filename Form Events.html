@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form Events </title>
+</head>
+<body>
+    <table>
+        <form action="">
+            <tr>
+                <td>NAME :</td>
+                <td>
+                    <input type="text" name="name" placeholder="Inter your name" id="fname" focusfuntion()/>
+                </td>
+            </tr>
+            <tr>
+                <td>CLASS :</td>
+                <td>
+                    <input type="text" name="neme" placeholder="Inter your class" id="class"/>
+                </td>
+            </tr>
+            <tr>
+                <td>COUNTRY :</td>
+                <td>
+                    <select>
+                        <option value="A">INDIA</option>
+                        <option value="A">PAKISTAN</option>
+                        <option value="A">NEPAL</option>
+                        <option value="A">CHINA</option>
+                        <option value="A">BHUTAN</option> 
+                    </select>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+<script type="text/javascript">
+    function focusfuntion(){
+    var focusfuntion  =  document.getElementById("fname").style.background = "lime";
+    }
+</script>
+</html>
